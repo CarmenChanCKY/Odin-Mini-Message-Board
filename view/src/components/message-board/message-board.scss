@@ -1,0 +1,82 @@
+@import "../../pages/common.scss";
+
+.message-board {
+  border-bottom: 1px solid #929292;
+}
+
+.message-info {
+  color: gray;
+}
+
+.message-user {
+  font-weight: bold;
+  float: left;
+}
+
+.message-time {
+  float: right;
+}
+
+.message-text {
+  clear: both;
+}
+
+@media screen and (min-width: $xl-min) {
+  .message-board {
+    padding: 45px 0px;
+  }
+
+  .message-info {
+    font-size: 16px;
+  }
+
+  .message-text {
+    padding-top: 25px;
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: $lg-min) and (max-width: $lg-max) {
+  .message-board {
+    padding: 35px 0px;
+  }
+
+  .message-info {
+    font-size: 16px;
+  }
+
+  .message-text {
+    padding-top: 25px;
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: $sm-min) and (max-width: $md-max) {
+  .message-board {
+    padding: 30px 0px;
+  }
+
+  .message-info {
+    font-size: 16px;
+  }
+
+  .message-text {
+    padding-top: 20px;
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: $sm) {
+  .message-board {
+    padding: 25px 0px;
+  }
+
+  .message-info {
+    font-size: 16px;
+  }
+
+  .message-text {
+    padding-top: 15px;
+    font-size: 18px;
+  }
+}

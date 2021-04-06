@@ -1,0 +1,78 @@
+$xl-min: 1200px;
+$lg-max: 1199.9px;
+$lg-min: 992px;
+$md-max: 991.9px;
+$md-min: 768px;
+$sm-max: 767.9px;
+$sm-min: 576px;
+$sm: 575.9px;
+
+%box-container {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #dbe9ee;
+  padding-bottom: 10px;
+}
+
+%box-content {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+%border-radius {
+  border-radius: 8px;
+}
+
+%button {
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+@mixin set-grid($grid) {
+  display: grid;
+  grid-template-columns: $grid;
+}
+
+@media screen and (min-width: $xl-min) {
+  %grid {
+    @include set-grid(repeat(4, 25%));
+  }
+}
+
+@media screen and (min-width: $lg-min) and (max-width: $lg-max) {
+  %grid {
+    @include set-grid(15% repeat(2, 35%) 15%);
+  }
+}
+
+@media screen and (min-width: $sm-min) and (max-width: $md-max) {
+  %grid {
+    @include set-grid(10% repeat(2, 40%) 10%);
+  }
+}
+
+@media screen and (max-width: $sm) {
+  %grid {
+    @include set-grid(5% repeat(2, 45%) 5%);
+  }
+
+  %button {
+    border: none;
+    outline: none;
+    padding: 10px 10px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+  }
+}

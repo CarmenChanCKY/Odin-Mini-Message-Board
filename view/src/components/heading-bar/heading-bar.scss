@@ -1,0 +1,82 @@
+@import "../../pages/common.scss";
+
+.heading-bar {
+  @extend %grid;
+  width: 100%;
+  background-color: #4f6d7a;
+  align-items: center;
+}
+
+.heading-bar-text {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.heading-bar-new-message-button {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  justify-self: end;
+}
+
+.new-message-button {
+  @extend %border-radius;
+  @extend %button;
+  background-color: #dbe9ee;
+  color: black;
+
+  &:hover {
+    background-color: #b3cad4;
+    transition: 0.2s;
+  }
+}
+
+.button-hide {
+  display: none;
+}
+
+@media screen and (min-width: $xl-min) {
+  .heading-bar {
+    height: 80px;
+  }
+
+  .heading-bar-text {
+    font-size: 28px;
+  }
+}
+
+@media screen and (min-width: $lg-min) and (max-width: $lg-max) {
+  .heading-bar {
+    height: 70px;
+  }
+
+  .heading-bar-text {
+    font-size: 26px;
+  }
+}
+
+@media screen and (min-width: $sm-min) and (max-width: $md-max) {
+  .heading-bar {
+    height: 70px;
+  }
+
+  .heading-bar-text {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: $sm) {
+  .heading-bar {
+    height: 65px;
+  }
+
+  .heading-bar-text {
+    font-size: 20px;
+  }
+}

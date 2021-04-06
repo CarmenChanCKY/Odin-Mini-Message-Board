@@ -1,0 +1,13 @@
+@import "../common.scss";
+
+.box-container {
+  @extend %box-container;
+}
+
+.message-box-container {
+  @extend %grid;
+}
+
+.message-box-content {
+  @extend %box-content;
+}

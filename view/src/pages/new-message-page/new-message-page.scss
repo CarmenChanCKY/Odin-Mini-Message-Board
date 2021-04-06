@@ -1,0 +1,125 @@
+@import "../common.scss";
+
+.new-message-container {
+  @extend %box-container;
+}
+
+.new-message-panel-container {
+  @extend %grid;
+}
+
+.new-message-panel-content {
+  @extend %box-content;
+}
+
+.label-text {
+  color: gray;
+}
+
+.text-field {
+  @extend %border-radius;
+  width: 100%;
+  outline: none;
+  border: none;
+}
+
+.submit-button {
+  @extend %border-radius;
+  @extend %button;
+
+  background-color: #4f6d7a;
+  color: white;
+
+  &:hover {
+    background-color: #253237;
+    transition: 0.2s;
+  }
+}
+
+@media screen and (min-width: $xl-min) {
+  .new-message-panel-field {
+    margin-top: 30px;
+  }
+
+  .label-text {
+    font-size: 22px;
+  }
+
+  .text-field {
+    height: 50px;
+    margin: 10px 0px;
+    padding-left: 10px;
+    font-size: 20px;
+  }
+
+  #info_message {
+    font-size: 18px;
+    margin-top: 30px;
+  }
+}
+
+@media screen and (min-width: $lg-min) and (max-width: $lg-max) {
+  .new-message-panel-field {
+    margin-top: 30px;
+  }
+
+  .label-text {
+    font-size: 18px;
+  }
+
+  .text-field {
+    height: 40px;
+    margin: 10px 0px;
+    padding-left: 10px;
+    font-size: 18px;
+  }
+
+  #info_message {
+    font-size: 18px;
+    margin-top: 30px;
+  }
+}
+
+@media screen and (min-width: $sm-min) and (max-width: $md-max) {
+  .new-message-panel-field {
+    margin-top: 25px;
+  }
+
+  .label-text {
+    font-size: 18px;
+  }
+
+  .text-field {
+    height: 40px;
+    margin: 10px 0px;
+    padding-left: 10px;
+    font-size: 18px;
+  }
+
+  #info_message {
+    font-size: 18px;
+    margin-top: 30px;
+  }
+}
+
+@media screen and (max-width: $sm) {
+  .new-message-panel-field {
+    margin-top: 25px;
+  }
+
+  .label-text {
+    font-size: 16px;
+  }
+
+  .text-field {
+    height: 40px;
+    margin: 10px 0px;
+    padding-left: 10px;
+    font-size: 16px;
+  }
+
+  #info_message {
+    font-size: 16px;
+    margin-top: 30px;
+  }
+}
